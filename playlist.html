@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://fonts.googleapis.com/css2?family=Nosifer&display=swap" rel="stylesheet">
+    <link rel="shortcut icon" type="imagex/png" href="assets/images/music-note.png">
+    <title>Playlist</title>
+    <style>
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+            background-color: black;
+        }
+
+        .playlist-title {
+            color: red;
+            font-size: 50px;
+            font-weight: bold;
+            font-family: 'Nosifer', cursive;
+        }
+
+        .container {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            gap: 20px;
+            flex-wrap: wrap;
+            width: 90%;
+            max-width: 1200px;
+            margin: auto;
+        }
+
+        .spotify-player {
+            width: 100%;
+            max-width: 500px;
+            height: 380px;
+            border: none;
+            border-radius: 12px;
+            margin-top: 20px;
+        }
+
+        .image {
+            max-width: 800px;
+            width: 100%;
+            height: auto;
+            border-radius: 10px;
+            object-fit: cover;
+        }
+
+        @media (max-width: 768px) {
+            .spotify-player {
+                width: 80%;
+                height: 320px;
+            }
+
+            .image {
+                max-width: 100%;
+                height: auto;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1 class="playlist-title">Playlist</h1>
+
+        <!-- Player do Spotify -->
+        <iframe class="spotify-player" src="https://open.spotify.com/embed/playlist/6G1yylbkuV3dxeOYhdeguk?utm_source=generator&theme=0" frameborder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe>
+
+        <img src="assets/images/download.png" alt="Imagem ilustrativa da playlist" class="image">
+    </div>
+</body>
+</html>
